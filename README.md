@@ -14,7 +14,7 @@ install.packages("devtools")
 library(devtools)
 
 # Install rdsmart from bitbucket
-install_bitbucket("brendo1001/dsmart")
+install_github("brendo1001/rdsmart")
 ```
 
 ## References
