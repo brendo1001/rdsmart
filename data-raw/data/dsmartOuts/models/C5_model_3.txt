@@ -1,0 +1,723 @@
+
+Call:
+C5.0.default(x = samples[, -ncol(samples)], y = samples$soil_class)
+
+
+C5.0 [Release 2.07 GPL Edition]  	Wed May 13 09:21:23 2015
+-------------------------------
+
+Class specified by attribute `outcome'
+
+Read 165 cases (21 attributes) from undefined.data
+
+Decision tree:
+
+th_dlr_alb_7km <= 10.0261:
+:...dem_nosinks_alb_slope_height_7km > 9.895802: 16 (13)
+:   dem_nosinks_alb_slope_height_7km <= 9.895802:
+:   :...dem_nosinks_alb_saga_wetness_t10_mod_catch_area <= 2.229552e+07: 10 (8/1)
+:       dem_nosinks_alb_saga_wetness_t10_mod_catch_area > 2.229552e+07: 8 (2/1)
+th_dlr_alb_7km > 10.0261:
+:...dem_nosinks_alb_saga_wetness_t10_mod_catch_area > 6.447618e+07:
+    :...dem_nosinks_alb_valley_depth_7km <= 32.87104:
+    :   :...k_dlr_alb_7km <= 1.525433: 6 (3/1)
+    :   :   k_dlr_alb_7km > 1.525433: 14 (3/1)
+    :   dem_nosinks_alb_valley_depth_7km > 32.87104:
+    :   :...dem_nosinks_alb_mrvbf_7km > 4.000793: 2 (2/1)
+    :       dem_nosinks_alb_mrvbf_7km <= 4.000793:
+    :       :...dem_nosinks_alb_catchment_area_7km <= 302399.6: 2 (19/5)
+    :           dem_nosinks_alb_catchment_area_7km > 302399.6: 19 (2)
+    dem_nosinks_alb_saga_wetness_t10_mod_catch_area <= 6.447618e+07:
+    :...k_dlr_alb_7km > 2.519379:
+        :...u_dlr_alb_7km <= 3.794297:
+        :   :...th_dlr_alb_7km > 18.79431: 10 (2/1)
+        :   :   th_dlr_alb_7km <= 18.79431:
+        :   :   :...dem_albers_no_sinks_7km <= 339.8578: 1 (3/1)
+        :   :       dem_albers_no_sinks_7km > 339.8578: 14 (2/1)
+        :   u_dlr_alb_7km > 3.794297:
+        :   :...k_dlr_alb_7km <= 3.275117:
+        :       :...dem_nosinks_alb_catchment_area_7km <= 10032.68: 5 (14/5)
+        :       :   dem_nosinks_alb_catchment_area_7km > 10032.68: 7 (2)
+        :       k_dlr_alb_7km > 3.275117:
+        :       :...u_dlr_alb_7km <= 6.525981: 7 (10/2)
+        :           u_dlr_alb_7km > 6.525981: 19 (2)
+        k_dlr_alb_7km <= 2.519379:
+        :...dem_nosinks_alb_plancurv_7km > 0.0001666748:
+            :...k_dlr_alb_7km <= 1.412724: 4 (3)
+            :   k_dlr_alb_7km > 1.412724:
+            :   :...k_dlr_alb_7km <= 2.288366: 22 (13/2)
+            :       k_dlr_alb_7km > 2.288366: 12 (3/1)
+            dem_nosinks_alb_plancurv_7km <= 0.0001666748:
+            :...dem_nosinks_alb_mrrtf_7km > 0.7904136:
+                :...dem_nosinks_alb_plancurv_7km <= -0.0002574954: 20 (2/1)
+                :   dem_nosinks_alb_plancurv_7km > -0.0002574954:
+                :   :...dem_nosinks_alb_normalised_height_7km > 0.4043583: 12 (5/1)
+                :       dem_nosinks_alb_normalised_height_7km <= 0.4043583:
+                :       :...dem_nosinks_alb_aspectdeg_7km <= 1.814097: 23 (4)
+                :           dem_nosinks_alb_aspectdeg_7km > 1.814097: 18 (3/1)
+                dem_nosinks_alb_mrrtf_7km <= 0.7904136:
+                :...dem_nosinks_alb_mid_slope_position_7km > 0.7362447:
+                    :...dem_nosinks_alb_profcurv_7km <= -0.000187106: 12 (15/6)
+                    :   dem_nosinks_alb_profcurv_7km > -0.000187106: 3 (2/1)
+                    dem_nosinks_alb_mid_slope_position_7km <= 0.7362447:
+                    :...k_dlr_alb_7km <= 1.289494:
+                        :...dem_nosinks_alb_catchment_area_7km <= 7033.573: 4 (2)
+                        :   dem_nosinks_alb_catchment_area_7km > 7033.573: 10 (2/1)
+                        k_dlr_alb_7km > 1.289494:
+                        :...dem_albers_no_sinks_7km > 360.5419: 3 (3/2)
+                            dem_albers_no_sinks_7km <= 360.5419:
+                            :...dem_nosinks_alb_slope_height_7km <= 5.267154: [S1]
+                                dem_nosinks_alb_slope_height_7km > 5.267154: [S2]
+
+SubTree [S1]
+
+dem_nosinks_alb_aspectdeg_7km <= 2.655254: 4 (2/1)
+dem_nosinks_alb_aspectdeg_7km > 2.655254: 12 (2)
+
+SubTree [S2]
+
+dem_nosinks_alb_curvature_7km <= -0.0005169678: 11 (4/1)
+dem_nosinks_alb_curvature_7km > -0.0005169678:
+:...k_dlr_alb_7km <= 2.034837: 12 (7/1)
+    k_dlr_alb_7km > 2.034837: 22 (6/1)
+
+
+Evaluation on training data (165 cases):
+
+	    Decision Tree   
+	  ----------------  
+	  Size      Errors  
+
+	    32   40(24.2%)   <<
+
+
+	  Class   Cases   False   False
+	                    Pos     Neg
+	  -----   -----   -----   -----
+	  1           6       1       4
+	  2          16       6       1
+	  3           8       3       6
+	  4           7       1       1
+	  5          10       5       1
+	  6           3       1       1
+	  7          12       2       2
+	  8           1       1       0
+	  10         13       3       4
+	  11          4       1       1
+	  12         25       9       2
+	  13          1       0       1
+	  14          4       2       1
+	  15          1       0       1
+	  16         14       0       1
+	  17          1       0       1
+	  18          4       1       2
+	  19          7       0       3
+	  20          1       1       0
+	  22         22       3       6
+	  23          5       0       1
+
+
+	Attribute usage:
+
+	100.00%	th_dlr_alb_7km
+	 92.12%	dem_nosinks_alb_saga_wetness_t10_mod_catch_area
+	 72.12%	k_dlr_alb_7km
+	 47.27%	dem_nosinks_alb_plancurv_7km
+	 35.76%	dem_nosinks_alb_mrrtf_7km
+	 27.27%	dem_nosinks_alb_mid_slope_position_7km
+	 26.67%	dem_nosinks_alb_slope_height_7km
+	 24.85%	dem_nosinks_alb_catchment_area_7km
+	 21.21%	u_dlr_alb_7km
+	 17.58%	dem_albers_no_sinks_7km
+	 17.58%	dem_nosinks_alb_valley_depth_7km
+	 13.94%	dem_nosinks_alb_mrvbf_7km
+	 10.30%	dem_nosinks_alb_curvature_7km
+	 10.30%	dem_nosinks_alb_profcurv_7km
+	  7.27%	dem_nosinks_alb_normalised_height_7km
+	  6.67%	dem_nosinks_alb_aspectdeg_7km
+
+
+Time: 0.0 secs
+
+
+Call:
+C5.0.default(x = samples[, -ncol(samples)], y = samples$soil_class)
+
+
+C5.0 [Release 2.07 GPL Edition]  	Wed May 13 09:56:49 2015
+-------------------------------
+
+Class specified by attribute `outcome'
+
+Read 165 cases (21 attributes) from undefined.data
+
+Decision tree:
+
+th_dlr_alb_7km <= 10.60639:
+:...dem_nosinks_alb_slope_height_7km <= 7.806965: 10 (7/1)
+:   dem_nosinks_alb_slope_height_7km > 7.806965:
+:   :...dem_nosinks_alb_mrvbf_7km > 4.833877: 10 (2/1)
+:       dem_nosinks_alb_mrvbf_7km <= 4.833877:
+:       :...dem_nosinks_alb_saga_wetness_t10_mod_catch_area <= 449554.1: 16 (8)
+:           dem_nosinks_alb_saga_wetness_t10_mod_catch_area > 449554.1:
+:           :...dem_nosinks_alb_mrrtf_7km <= 0.517866: 16 (4/1)
+:               dem_nosinks_alb_mrrtf_7km > 0.517866: 18 (3)
+th_dlr_alb_7km > 10.60639:
+:...k_dlr_alb_7km > 2.688479:
+    :...dem_nosinks_alb_normalised_height_7km <= 0.1454007: 2 (5/4)
+    :   dem_nosinks_alb_normalised_height_7km > 0.1454007:
+    :   :...dem_nosinks_alb_plancurv_7km <= -6.858689e-05: 5 (6/1)
+    :       dem_nosinks_alb_plancurv_7km > -6.858689e-05:
+    :       :...dem_nosinks_alb_valley_depth_7km <= 17.63994: 12 (6/2)
+    :           dem_nosinks_alb_valley_depth_7km > 17.63994: 7 (22/8)
+    k_dlr_alb_7km <= 2.688479:
+    :...dem_nosinks_alb_saga_wetness_t10_mod_catch_area > 5.581276e+07:
+        :...dem_nosinks_alb_saga_wetness_t10_mod_catch_area <= 1.977193e+09:
+        :   :...dem_nosinks_alb_mrvbf_7km <= 1.054429: 2 (8)
+        :   :   dem_nosinks_alb_mrvbf_7km > 1.054429: 22 (4/2)
+        :   dem_nosinks_alb_saga_wetness_t10_mod_catch_area > 1.977193e+09:
+        :   :...dem_nosinks_alb_mrvbf_7km <= 4.958893: 19 (11/2)
+        :       dem_nosinks_alb_mrvbf_7km > 4.958893: 2 (3/1)
+        dem_nosinks_alb_saga_wetness_t10_mod_catch_area <= 5.581276e+07:
+        :...u_dlr_alb_7km <= 2.623658:
+            :...dem_nosinks_alb_slope_height_7km <= 5.183846: 10 (5)
+            :   dem_nosinks_alb_slope_height_7km > 5.183846:
+            :   :...dem_nosinks_alb_aspectdeg_7km <= 2.326584:
+            :       :...dem_nosinks_alb_slopedeg_7km <= 0.02615425: 22 (3/1)
+            :       :   dem_nosinks_alb_slopedeg_7km > 0.02615425: 12 (21/7)
+            :       dem_nosinks_alb_aspectdeg_7km > 2.326584:
+            :       :...dem_nosinks_alb_mid_slope_position_7km <= 0.1839528: 11 (3/1)
+            :           dem_nosinks_alb_mid_slope_position_7km > 0.1839528: 22 (17/3)
+            u_dlr_alb_7km > 2.623658:
+            :...th_dlr_alb_7km > 17.88075:
+                :...dem_nosinks_alb_slope_height_7km <= 7.698452: 12 (2)
+                :   dem_nosinks_alb_slope_height_7km > 7.698452: 22 (3)
+                th_dlr_alb_7km <= 17.88075:
+                :...k_dlr_alb_7km <= 1.621345: 23 (9/1)
+                    k_dlr_alb_7km > 1.621345:
+                    :...dem_nosinks_alb_catchment_area_7km > 4886.03: 23 (5/2)
+                        dem_nosinks_alb_catchment_area_7km <= 4886.03:
+                        :...dem_nosinks_alb_aspectdeg_7km <= 2.759423: 2 (4/1)
+                            dem_nosinks_alb_aspectdeg_7km > 2.759423: 4 (4/1)
+
+
+Evaluation on training data (165 cases):
+
+	    Decision Tree   
+	  ----------------  
+	  Size      Errors  
+
+	    24   40(24.2%)   <<
+
+
+	  Class   Cases   False   False
+	                    Pos     Neg
+	  -----   -----   -----   -----
+	  1           1       0       1
+	  2          16       6       2
+	  3           6       0       6
+	  4           3       1       0
+	  5           9       1       4
+	  6           2       0       2
+	  7          16       8       2
+	  9           2       0       2
+	  10         14       2       2
+	  11          2       1       0
+	  12         24       9       4
+	  14          3       0       3
+	  15          2       0       2
+	  16         12       1       1
+	  17          1       0       1
+	  18          4       0       1
+	  19         10       2       1
+	  20          1       0       1
+	  21          3       0       3
+	  22         23       6       2
+	  23         11       3       0
+
+
+	Attribute usage:
+
+	100.00%	th_dlr_alb_7km
+	 85.45%	k_dlr_alb_7km
+	 70.91%	dem_nosinks_alb_saga_wetness_t10_mod_catch_area
+	 47.27%	dem_nosinks_alb_slope_height_7km
+	 46.06%	u_dlr_alb_7km
+	 31.52%	dem_nosinks_alb_aspectdeg_7km
+	 26.06%	dem_nosinks_alb_mrvbf_7km
+	 23.64%	dem_nosinks_alb_normalised_height_7km
+	 20.61%	dem_nosinks_alb_plancurv_7km
+	 16.97%	dem_nosinks_alb_valley_depth_7km
+	 14.55%	dem_nosinks_alb_slopedeg_7km
+	 12.12%	dem_nosinks_alb_mid_slope_position_7km
+	  7.88%	dem_nosinks_alb_catchment_area_7km
+	  4.24%	dem_nosinks_alb_mrrtf_7km
+
+
+Time: 0.0 secs
+
+
+Call:
+C5.0.default(x = samples[, -ncol(samples)], y = samples$soil_class)
+
+
+C5.0 [Release 2.07 GPL Edition]  	Wed May 13 12:05:22 2015
+-------------------------------
+
+Class specified by attribute `outcome'
+
+Read 165 cases (21 attributes) from undefined.data
+
+Decision tree:
+
+th_dlr_alb_7km <= 7.015658: 16 (15/1)
+th_dlr_alb_7km > 7.015658:
+:...dem_nosinks_alb_saga_wetness_t10_mod_catch_area > 3.086228e+07:
+    :...dem_nosinks_alb_aspectdeg_7km > 4.3375:
+    :   :...dem_albers_no_sinks_7km <= 328.9077: 22 (3/1)
+    :   :   dem_albers_no_sinks_7km > 328.9077: 5 (6/1)
+    :   dem_nosinks_alb_aspectdeg_7km <= 4.3375:
+    :   :...dem_nosinks_alb_saga_wetness_t10_mod_catch_area <= 1.341583e+08:
+    :       :...th_dlr_alb_7km > 22.56183: 22 (2)
+    :       :   th_dlr_alb_7km <= 22.56183:
+    :       :   :...dem_nosinks_alb_valley_depth_7km <= 35.03302: 2 (7/2)
+    :       :       dem_nosinks_alb_valley_depth_7km > 35.03302: 8 (2/1)
+    :       dem_nosinks_alb_saga_wetness_t10_mod_catch_area > 1.341583e+08:
+    :       :...th_dlr_alb_7km <= 13.54493:
+    :           :...dem_nosinks_alb_slope_height_7km > 4.897248: 2 (5)
+    :           :   dem_nosinks_alb_slope_height_7km <= 4.897248:
+    :           :   :...dem_albers_no_sinks_7km <= 315.6934: 2 (6/1)
+    :           :       dem_albers_no_sinks_7km > 315.6934: 19 (2)
+    :           th_dlr_alb_7km > 13.54493:
+    :           :...dem_nosinks_alb_profcurv_7km <= -0.0006591333: 6 (2)
+    :               dem_nosinks_alb_profcurv_7km > -0.0006591333:
+    :               :...dem_nosinks_alb_catchment_area_7km <= 12744.02: 2 (3/1)
+    :                   dem_nosinks_alb_catchment_area_7km > 12744.02: 19 (3/1)
+    dem_nosinks_alb_saga_wetness_t10_mod_catch_area <= 3.086228e+07:
+    :...u_dlr_alb_7km > 3.770779:
+        :...dem_nosinks_alb_mrrtf_7km <= 0.3367742:
+        :   :...k_dlr_alb_7km <= 2.865508: 5 (5/1)
+        :   :   k_dlr_alb_7km > 2.865508: 7 (12/3)
+        :   dem_nosinks_alb_mrrtf_7km > 0.3367742:
+        :   :...dem_nosinks_alb_aspectdeg_7km <= 3.241112: 19 (2)
+        :       dem_nosinks_alb_aspectdeg_7km > 3.241112:
+        :       :...dem_nosinks_alb_aspectdeg_7km > 4.628892: 7 (2)
+        :           dem_nosinks_alb_aspectdeg_7km <= 4.628892:
+        :           :...dem_nosinks_alb_mrvbf_7km <= 1.084203: 1 (2)
+        :               dem_nosinks_alb_mrvbf_7km > 1.084203: 23 (2)
+        u_dlr_alb_7km <= 3.770779:
+        :...dem_nosinks_alb_mrvbf_7km > 3.162856:
+            :...dem_nosinks_alb_plancurv_7km <= 5.237411e-05:
+            :   :...dem_nosinks_alb_aspectdeg_7km <= 2.042953: 23 (4/1)
+            :   :   dem_nosinks_alb_aspectdeg_7km > 2.042953: 10 (6)
+            :   dem_nosinks_alb_plancurv_7km > 5.237411e-05:
+            :   :...dem_albers_no_sinks_7km <= 342.5682: 8 (2/1)
+            :       dem_albers_no_sinks_7km > 342.5682: 4 (3)
+            dem_nosinks_alb_mrvbf_7km <= 3.162856:
+            :...dem_nosinks_alb_valley_depth_7km > 47.30606:
+                :...dem_nosinks_alb_slope_height_7km <= 7.087401: 3 (14/7)
+                :   dem_nosinks_alb_slope_height_7km > 7.087401: 2 (2/1)
+                dem_nosinks_alb_valley_depth_7km <= 47.30606:
+                :...u_dlr_alb_7km > 2.613316:
+                    :...dem_nosinks_alb_aspectdeg_7km <= 0.2937343: 3 (2/1)
+                    :   dem_nosinks_alb_aspectdeg_7km > 0.2937343: [S1]
+                    u_dlr_alb_7km <= 2.613316:
+                    :...k_dlr_alb_7km <= 1.215468:
+                        :...dem_albers_no_sinks_7km <= 349.0435: 4 (2/1)
+                        :   dem_albers_no_sinks_7km > 349.0435: 10 (2)
+                        k_dlr_alb_7km > 1.215468:
+                        :...th_dlr_alb_7km > 17.47012: 4 (2/1)
+                            th_dlr_alb_7km <= 17.47012:
+                            :...dem_nosinks_alb_mrrtf_7km > 2.174521: 1 (2/1)
+                                dem_nosinks_alb_mrrtf_7km <= 2.174521:
+                                :...dem_nosinks_alb_slope_height_7km <= 9.098215: [S2]
+                                    dem_nosinks_alb_slope_height_7km > 9.098215: [S3]
+
+SubTree [S1]
+
+dem_nosinks_alb_standardised_height_7km <= 275.0931: 12 (19/4)
+dem_nosinks_alb_standardised_height_7km > 275.0931: 4 (2/1)
+
+SubTree [S2]
+
+dem_nosinks_alb_mid_slope_position_7km <= 0.2894253: 12 (3/1)
+dem_nosinks_alb_mid_slope_position_7km > 0.2894253: 22 (6)
+
+SubTree [S3]
+
+dem_nosinks_alb_slope_height_7km <= 9.647005: 11 (3/1)
+dem_nosinks_alb_slope_height_7km > 9.647005:
+:...dem_nosinks_alb_valley_depth_7km > 13.0149: 22 (5)
+    dem_nosinks_alb_valley_depth_7km <= 13.0149:
+    :...dem_nosinks_alb_plancurv_7km <= 0.0001259389: 11 (3)
+        dem_nosinks_alb_plancurv_7km > 0.0001259389: 22 (2)
+
+
+Evaluation on training data (165 cases):
+
+	    Decision Tree   
+	  ----------------  
+	  Size      Errors  
+
+	    37   34(20.6%)   <<
+
+
+	  Class   Cases   False   False
+	                    Pos     Neg
+	  -----   -----   -----   -----
+	  1           4       1       1
+	  2          19       5       1
+	  3           8       8       0
+	  4           8       3       2
+	  5          11       2       2
+	  6           3       0       1
+	  7          11       3       0
+	  8           2       2       0
+	  9           1       0       1
+	  10         11       0       3
+	  11          5       1       0
+	  12         26       5       9
+	  14          2       0       2
+	  15          1       0       1
+	  16         14       1       0
+	  17          1       0       1
+	  18          3       0       3
+	  19          8       1       2
+	  20          1       0       1
+	  21          1       0       1
+	  22         20       1       3
+	  23          5       1       0
+
+
+	Attribute usage:
+
+	100.00%	th_dlr_alb_7km
+	 90.91%	dem_nosinks_alb_saga_wetness_t10_mod_catch_area
+	 66.06%	u_dlr_alb_7km
+	 53.33%	dem_nosinks_alb_mrvbf_7km
+	 49.70%	dem_nosinks_alb_aspectdeg_7km
+	 47.27%	dem_nosinks_alb_valley_depth_7km
+	 30.91%	dem_nosinks_alb_slope_height_7km
+	 29.70%	dem_nosinks_alb_mrrtf_7km
+	 28.48%	k_dlr_alb_7km
+	 15.76%	dem_albers_no_sinks_7km
+	 12.73%	dem_nosinks_alb_standardised_height_7km
+	 12.12%	dem_nosinks_alb_plancurv_7km
+	  5.45%	dem_nosinks_alb_mid_slope_position_7km
+	  4.85%	dem_nosinks_alb_profcurv_7km
+	  3.64%	dem_nosinks_alb_catchment_area_7km
+
+
+Time: 0.0 secs
+
+
+Call:
+C5.0.default(x = samples[, -ncol(samples)], y = samples$soil_class)
+
+
+C5.0 [Release 2.07 GPL Edition]  	Wed May 13 12:13:23 2015
+-------------------------------
+
+Class specified by attribute `outcome'
+
+Read 165 cases (21 attributes) from undefined.data
+
+Decision tree:
+
+u_dlr_alb_7km > 3.676505:
+:...dem_nosinks_alb_valley_depth_7km > 73.26452:
+:   :...dem_nosinks_alb_mrrtf_7km <= 0.2150677: 1 (4/1)
+:   :   dem_nosinks_alb_mrrtf_7km > 0.2150677:
+:   :   :...dem_nosinks_alb_catchment_area_7km <= 5410.841: 2 (2/1)
+:   :       dem_nosinks_alb_catchment_area_7km > 5410.841: 22 (4)
+:   dem_nosinks_alb_valley_depth_7km <= 73.26452:
+:   :...dem_nosinks_alb_aspectdeg_7km <= 2.977431:
+:       :...dem_nosinks_alb_mrvbf_7km <= 0.7949046: 12 (4/1)
+:       :   dem_nosinks_alb_mrvbf_7km > 0.7949046:
+:       :   :...dem_nosinks_alb_aspectdeg_7km <= 0.7147157: 7 (2)
+:       :       dem_nosinks_alb_aspectdeg_7km > 0.7147157: 8 (2/1)
+:       dem_nosinks_alb_aspectdeg_7km > 2.977431:
+:       :...dem_nosinks_alb_mid_slope_position_7km <= 0.528645: 5 (9/2)
+:           dem_nosinks_alb_mid_slope_position_7km > 0.528645:
+:           :...th_dlr_alb_7km > 17.37871: 7 (7)
+:               th_dlr_alb_7km <= 17.37871:
+:               :...dem_nosinks_alb_slope_height_7km > 6.428672: 23 (3/1)
+:                   dem_nosinks_alb_slope_height_7km <= 6.428672:
+:                   :...dem_nosinks_alb_plancurv_7km <= -6.179982e-07: 5 (4)
+:                       dem_nosinks_alb_plancurv_7km > -6.179982e-07:
+:                       :...dem_albers_no_sinks_7km <= 340.9521: 7 (2)
+:                           dem_albers_no_sinks_7km > 340.9521: 5 (2/1)
+u_dlr_alb_7km <= 3.676505:
+:...dem_nosinks_alb_valley_depth_7km > 73.59023:
+    :...dem_albers_no_sinks_7km > 322.708: 11 (2)
+    :   dem_albers_no_sinks_7km <= 322.708:
+    :   :...dem_nosinks_alb_mrrtf_7km > 0.8561797: 2 (2/1)
+    :       dem_nosinks_alb_mrrtf_7km <= 0.8561797:
+    :       :...dem_nosinks_alb_catchment_area_7km <= 7878.427:
+    :           :...dem_nosinks_alb_plancurv_7km <= -8.307363e-05: 2 (2/1)
+    :           :   dem_nosinks_alb_plancurv_7km > -8.307363e-05: 6 (4)
+    :           dem_nosinks_alb_catchment_area_7km > 7878.427:
+    :           :...dem_nosinks_alb_standardised_height_7km > 57.26046: 14 (3/1)
+    :               dem_nosinks_alb_standardised_height_7km <= 57.26046:
+    :               :...dem_nosinks_alb_saga_wetness_t10_7km <= 25.66181: 19 (4)
+    :                   dem_nosinks_alb_saga_wetness_t10_7km > 25.66181: 2 (4/1)
+    dem_nosinks_alb_valley_depth_7km <= 73.59023:
+    :...k_dlr_alb_7km <= 1.24865:
+        :...dem_nosinks_alb_saga_wetness_t10_7km <= 16.62226: 16 (13/3)
+        :   dem_nosinks_alb_saga_wetness_t10_7km > 16.62226:
+        :   :...dem_nosinks_alb_aspectdeg_7km <= 1.254243:
+        :       :...dem_albers_no_sinks_7km <= 342.9132: 2 (2)
+        :       :   dem_albers_no_sinks_7km > 342.9132: 14 (2/1)
+        :       dem_nosinks_alb_aspectdeg_7km > 1.254243: [S1]
+        k_dlr_alb_7km > 1.24865:
+        :...dem_albers_no_sinks_7km <= 339.7448:
+            :...dem_nosinks_alb_mid_slope_position_7km > 0.705517: 10 (6/1)
+            :   dem_nosinks_alb_mid_slope_position_7km <= 0.705517:
+            :   :...dem_nosinks_alb_aspectdeg_7km <= 3.971771: 2 (4)
+            :       dem_nosinks_alb_aspectdeg_7km > 3.971771: 4 (3/1)
+            dem_albers_no_sinks_7km > 339.7448:
+            :...u_dlr_alb_7km <= 2.398583:
+                :...dem_nosinks_alb_mrvbf_7km > 1.190453:
+                :   :...dem_nosinks_alb_plancurv_7km <= -0.0002794498: 22 (2)
+                :   :   dem_nosinks_alb_plancurv_7km > -0.0002794498: 12 (5/1)
+                :   dem_nosinks_alb_mrvbf_7km <= 1.190453:
+                :   :...u_dlr_alb_7km > 2.260843: 20 (3/1)
+                :       u_dlr_alb_7km <= 2.260843:
+                :       :...dem_albers_no_sinks_7km <= 363.4159: 22 (7/1)
+                :           dem_albers_no_sinks_7km > 363.4159: 11 (2)
+                u_dlr_alb_7km > 2.398583:
+                :...dem_nosinks_alb_mrrtf_7km <= 0.2795925:
+                    :...dem_nosinks_alb_plancurv_7km <= -0.0005351861: 12 (2/1)
+                    :   dem_nosinks_alb_plancurv_7km > -0.0005351861:
+                    :   :...dem_nosinks_alb_slope_height_7km <= 6.428672: 3 (3)
+                    :       dem_nosinks_alb_slope_height_7km > 6.428672: 12 (16/5)
+                    dem_nosinks_alb_mrrtf_7km > 0.2795925:
+                    :...dem_nosinks_alb_saga_wetness_t10_7km <= 14.37122: 10 (2/1)
+                        dem_nosinks_alb_saga_wetness_t10_7km > 14.37122:
+                        :...dem_nosinks_alb_catchment_area_7km > 9663.841: 6 (2/1)
+                            dem_nosinks_alb_catchment_area_7km <= 9663.841:
+                            :...dem_nosinks_alb_aspectdeg_7km <= 0.8974751: 23 (3/1)
+                                dem_nosinks_alb_aspectdeg_7km > 0.8974751: 12 (10/2)
+
+SubTree [S1]
+
+dem_nosinks_alb_saga_wetness_t10_mod_catch_area <= 2.878775e+07: 10 (10)
+dem_nosinks_alb_saga_wetness_t10_mod_catch_area > 2.878775e+07: 16 (2)
+
+
+Evaluation on training data (165 cases):
+
+	    Decision Tree   
+	  ----------------  
+	  Size      Errors  
+
+	    39   32(19.4%)   <<
+
+
+	  Class   Cases   False   False
+	                    Pos     Neg
+	  -----   -----   -----   -----
+	  1           4       1       1
+	  2          13       4       1
+	  3           8       0       5
+	  4           3       1       1
+	  5          14       3       2
+	  6           5       1       0
+	  7          11       0       0
+	  8           1       1       0
+	  9           1       0       1
+	  10         16       2       0
+	  11          6       0       2
+	  12         28      10       1
+	  13          1       0       1
+	  14          3       2       0
+	  16         12       3       0
+	  17          1       0       1
+	  18          4       0       4
+	  19          7       0       3
+	  20          3       1       1
+	  21          1       0       1
+	  22         16       1       4
+	  23          7       2       3
+
+
+	Attribute usage:
+
+	100.00%	dem_nosinks_alb_valley_depth_7km
+	100.00%	u_dlr_alb_7km
+	 60.00%	dem_albers_no_sinks_7km
+	 60.00%	k_dlr_alb_7km
+	 43.03%	dem_nosinks_alb_aspectdeg_7km
+	 40.61%	dem_nosinks_alb_mrrtf_7km
+	 32.73%	dem_nosinks_alb_saga_wetness_t10_7km
+	 25.45%	dem_nosinks_alb_plancurv_7km
+	 24.24%	dem_nosinks_alb_mid_slope_position_7km
+	 23.03%	dem_nosinks_alb_catchment_area_7km
+	 18.18%	dem_nosinks_alb_slope_height_7km
+	 16.36%	dem_nosinks_alb_mrvbf_7km
+	 10.91%	th_dlr_alb_7km
+	  7.27%	dem_nosinks_alb_saga_wetness_t10_mod_catch_area
+	  6.67%	dem_nosinks_alb_standardised_height_7km
+
+
+Time: 0.0 secs
+
+
+Call:
+C5.0.default(x = samples[, -ncol(samples)], y = samples$soil_class)
+
+
+C5.0 [Release 2.07 GPL Edition]  	Wed May 13 21:38:20 2015
+-------------------------------
+
+Class specified by attribute `outcome'
+
+Read 165 cases (21 attributes) from undefined.data
+
+Decision tree:
+
+th_dlr_alb_7km <= 9.370686:
+:...th_dlr_alb_7km > 7.353543: 10 (6)
+:   th_dlr_alb_7km <= 7.353543:
+:   :...dem_nosinks_alb_slope_height_7km <= 7.56798: 4 (2/1)
+:       dem_nosinks_alb_slope_height_7km > 7.56798:
+:       :...dem_nosinks_alb_catchment_area_7km <= 2320.327: 17 (2/1)
+:           dem_nosinks_alb_catchment_area_7km > 2320.327: 16 (12/1)
+th_dlr_alb_7km > 9.370686:
+:...dem_nosinks_alb_saga_wetness_t10_mod_catch_area > 5.408539e+07:
+    :...dem_nosinks_alb_slope_height_7km > 11.58246: 14 (3/1)
+    :   dem_nosinks_alb_slope_height_7km <= 11.58246:
+    :   :...dem_nosinks_alb_saga_wetness_t10_mod_catch_area <= 7.359128e+08:
+    :       :...k_dlr_alb_7km <= 1.825358: 6 (2/1)
+    :       :   k_dlr_alb_7km > 1.825358:
+    :       :   :...dem_nosinks_alb_plancurv_7km > 9.698342e-05: 21 (2)
+    :       :       dem_nosinks_alb_plancurv_7km <= 9.698342e-05:
+    :       :       :...k_dlr_alb_7km <= 3.124209: 22 (5/1)
+    :       :           k_dlr_alb_7km > 3.124209: 2 (2)
+    :       dem_nosinks_alb_saga_wetness_t10_mod_catch_area > 7.359128e+08:
+    :       :...dem_nosinks_alb_mrvbf_7km > 3.300043: [S1]
+    :           dem_nosinks_alb_mrvbf_7km <= 3.300043:
+    :           :...dem_nosinks_alb_catchment_area_7km > 9748.4:
+    :               :...dem_nosinks_alb_aspectdeg_7km <= 2.935021: 6 (2)
+    :               :   dem_nosinks_alb_aspectdeg_7km > 2.935021: 2 (2)
+    :               dem_nosinks_alb_catchment_area_7km <= 9748.4:
+    :               :...dem_nosinks_alb_mrrtf_7km <= 0.2422261: 2 (4)
+    :                   dem_nosinks_alb_mrrtf_7km > 0.2422261:
+    :                   :...dem_nosinks_alb_aspectdeg_7km <= 0.723177: 2 (2)
+    :                       dem_nosinks_alb_aspectdeg_7km > 0.723177: 19 (2)
+    dem_nosinks_alb_saga_wetness_t10_mod_catch_area <= 5.408539e+07:
+    :...k_dlr_alb_7km > 2.645186:
+        :...th_dlr_alb_7km <= 23.44924:
+        :   :...dem_nosinks_alb_mrrtf_7km <= 0.9103919: 5 (19/6)
+        :   :   dem_nosinks_alb_mrrtf_7km > 0.9103919: 12 (2)
+        :   th_dlr_alb_7km > 23.44924:
+        :   :...dem_albers_no_sinks_7km <= 336.0511: 22 (3/1)
+        :       dem_albers_no_sinks_7km > 336.0511:
+        :       :...u_dlr_alb_7km <= 4.619683: 2 (2/1)
+        :           u_dlr_alb_7km > 4.619683:
+        :           :...dem_nosinks_alb_saga_wetness_t10_7km <= 9.456746: 2 (2/1)
+        :               dem_nosinks_alb_saga_wetness_t10_7km > 9.456746: 7 (10/1)
+        k_dlr_alb_7km <= 2.645186:
+        :...dem_albers_no_sinks_7km <= 342.2115:
+            :...dem_nosinks_alb_saga_wetness_t10_7km <= 19.19145:
+            :   :...dem_nosinks_alb_slope_height_7km <= 9.713991: 11 (2/1)
+            :   :   dem_nosinks_alb_slope_height_7km > 9.713991: 22 (3)
+            :   dem_nosinks_alb_saga_wetness_t10_7km > 19.19145:
+            :   :...dem_nosinks_alb_valley_depth_7km <= 45.87582: 2 (5/1)
+            :       dem_nosinks_alb_valley_depth_7km > 45.87582: 10 (6)
+            dem_albers_no_sinks_7km > 342.2115:
+            :...k_dlr_alb_7km <= 2.001163:
+                :...dem_nosinks_alb_plancurv_7km <= -2.496764e-05:
+                :   :...u_dlr_alb_7km > 2.799673: 4 (2)
+                :   :   u_dlr_alb_7km <= 2.799673: [S2]
+                :   dem_nosinks_alb_plancurv_7km > -2.496764e-05:
+                :   :...th_dlr_alb_7km <= 11.69246: 22 (2)
+                :       th_dlr_alb_7km > 11.69246:
+                :       :...k_dlr_alb_7km <= 1.490273:
+                :           :...dem_nosinks_alb_curvature_7km <= 0.000382114: 10 (3)
+                :           :   dem_nosinks_alb_curvature_7km > 0.000382114: 12 (3/1)
+                :           k_dlr_alb_7km > 1.490273:
+                :           :...dem_albers_no_sinks_7km <= 345.529: 12 (3/1)
+                :               dem_albers_no_sinks_7km > 345.529: 23 (6)
+                k_dlr_alb_7km > 2.001163:
+                :...dem_nosinks_alb_ruggedness_7km <= 0.7325822: 10 (2/1)
+                    dem_nosinks_alb_ruggedness_7km > 0.7325822:
+                    :...u_dlr_alb_7km > 2.653625: 12 (4/1)
+                        u_dlr_alb_7km <= 2.653625:
+                        :...dem_albers_no_sinks_7km <= 347.7134: 2 (2/1)
+                            dem_albers_no_sinks_7km > 347.7134:
+                            :...dem_nosinks_alb_profcurv_7km <= 0.0002591915: 22 (8)
+                                dem_nosinks_alb_profcurv_7km > 0.0002591915:
+                                :...dem_nosinks_alb_mrvbf_7km <= 0.3797001: 20 (2)
+                                    dem_nosinks_alb_mrvbf_7km > 0.3797001: 12 (2/1)
+
+SubTree [S1]
+
+dem_nosinks_alb_saga_wetness_t10_mod_catch_area <= 1.001233e+10: 19 (3)
+dem_nosinks_alb_saga_wetness_t10_mod_catch_area > 1.001233e+10: 13 (2)
+
+SubTree [S2]
+
+dem_nosinks_alb_mid_slope_position_7km <= 0.7642405: 12 (12/4)
+dem_nosinks_alb_mid_slope_position_7km > 0.7642405: 3 (7/2)
+
+
+Evaluation on training data (165 cases):
+
+	    Decision Tree   
+	  ----------------  
+	  Size      Errors  
+
+	    40   30(18.2%)   <<
+
+
+	  Class   Cases   False   False
+	                    Pos     Neg
+	  -----   -----   -----   -----
+	  1           3       0       3
+	  2          18       4       1
+	  3           8       2       3
+	  4           3       1       0
+	  5          13       6       0
+	  6           3       1       0
+	  7          13       1       4
+	  8           1       0       1
+	  9           1       0       1
+	  10         18       1       2
+	  11          2       1       1
+	  12         23       8       5
+	  13          2       0       0
+	  14          2       1       0
+	  16         11       1       0
+	  17          2       1       1
+	  18          2       0       2
+	  19          7       0       2
+	  20          2       0       0
+	  21          3       0       1
+	  22         20       2       1
+	  23          8       0       2
+
+
+	Attribute usage:
+
+	100.00%	th_dlr_alb_7km
+	 86.67%	dem_nosinks_alb_saga_wetness_t10_mod_catch_area
+	 74.55%	k_dlr_alb_7km
+	 55.15%	dem_albers_no_sinks_7km
+	 32.12%	u_dlr_alb_7km
+	 31.52%	dem_nosinks_alb_slope_height_7km
+	 28.48%	dem_nosinks_alb_plancurv_7km
+	 17.58%	dem_nosinks_alb_mrrtf_7km
+	 16.97%	dem_nosinks_alb_saga_wetness_t10_7km
+	 15.76%	dem_nosinks_alb_catchment_area_7km
+	 12.73%	dem_nosinks_alb_mrvbf_7km
+	 12.12%	dem_nosinks_alb_ruggedness_7km
+	 11.52%	dem_nosinks_alb_mid_slope_position_7km
+	  7.27%	dem_nosinks_alb_profcurv_7km
+	  6.67%	dem_nosinks_alb_valley_depth_7km
+	  4.85%	dem_nosinks_alb_aspectdeg_7km
+	  3.64%	dem_nosinks_alb_curvature_7km
+
+
+Time: 0.0 secs
+
